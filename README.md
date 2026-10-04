@@ -32,33 +32,50 @@ The analysis investigates revenue trends, customer purchasing behavior, product 
 
 The analytical order view contains **99,441 unique orders**. Revenue reconciliation between the analytical view and source order-item records produced a difference of 0.00. Based on the dashboard visualizations, the following specific trends have been identified:
 
-* **Fulfillment Friction:** The system tracks a high **Average Delivery Time of 12 Days**, driving a **Late Delivery Rate of 7.65%** (translating to 371 totally delayed orders). Regional breakdown reveals that shipping corridors into **AM and AL** experience extreme delivery friction, reaching up to **50.00% late delivery rates**.
-* **Retention Deficit:** Customer purchasing patterns show an extremely high attrition floor, with **One-Time Customers accounting for 93.84%** of total buyers, leaving repeat shoppers at just 6.16%.
-* **Core Revenue Drivers:** Overall sales reached **\$2 Million** across the operational view, maintaining an **Average Order Value (AOV) of \$419.69**, heavily anchored by volume in the bed/bath, health, and sports categories.
-* **Fulfillment vs Sentiment:** While the baseline **Average Review Score holds at a 4 out of 5**, localized visual analytics prove that late delivery status strongly correlates with 1 and 2-star feedback spikes.
+* **Fulfillment Friction:** The system tracks a high **Average Delivery Time: The analysis recorded an average delivery time of approximately 12 days, with a 7.65% late-delivery rate among orders included in the applicable delivery analysis. Regional breakdown reveals that shipping corridors into **AM and AL** experience extreme delivery friction, reaching up to **50.00% late delivery rates**.
+* **Retention Deficit:** Customer purchasing patterns show Customer Retention Opportunity, with **One-Time Customers accounting for 93.84%** of total buyers, leaving repeat shoppers at just 6.16%.
+* **Revenue Performance:** The dashboard provides a consolidated view of product sales, order value, and category-level revenue performance, with major contributions from leading product categories.
+* **Fulfillment vs Sentiment:** While the baseline **Average Review Score holds at a 4 out of 5**, The analysis shows an observable relationship between late delivery and lower review scores, with late deliveries associated with a greater concentration of 1- and 2-star reviews.
+
+## Key Insights
+
+The analysis investigates revenue trends, customer purchasing behavior, product and category performance, payment preferences, delivery delays, and customer satisfaction.
+
+The analytical order view contains **99,441 unique orders**. Revenue reconciliation between the analytical view and source order-item records produced a **0.00 difference**, confirming that the analytical transformation preserved the underlying product-revenue values.
+
+Based on the completed SQL analysis and Power BI dashboard, the following key trends were identified:
+
+* **Fulfillment Performance:** The analysis recorded an average delivery time of approximately **12 days**, with a **7.65% late-delivery rate** among orders included in the applicable delivery analysis. Delivery performance varies considerably across customer states.
+
+* **Customer Retention Opportunity:** **93.84% of customers were one-time purchasers**, while repeat customers represented approximately **6.16%**. This indicates a significant opportunity to improve repeat purchasing and customer lifetime value.
+
+* **Category & Revenue Performance:** Revenue is concentrated across leading product categories, with the dashboard highlighting the categories and products contributing most significantly to sales performance.
+
+* **Customer Satisfaction:** The overall average review score was approximately **4.0 out of 5**. The analysis also shows an observable relationship between delivery performance and customer feedback, with late deliveries associated with a greater concentration of lower review scores.
+
+* **Geographic Delivery Differences:** Late-delivery performance varies across customer states. States showing higher late-delivery rates should be investigated alongside their order volumes before operational decisions are made.
 
 ## Recommendations
 
-* **Address High-Delay Corridors:** Prioritize operational deep-dives into the **AM and AL logistics lanes** to renegotiate third-party carrier SLAs or re-route high-delay dispatch segments.
-* **Deploy Retention Campaigns:** Design targeted loyalty initiatives or post-purchase triggers focusing on the **93.84% one-time buyer demographic** to drive repeat traction.
-* **Proactive Support Interventions:** Create automated customer support alerts that flag orders exceeding the standard transit windows, deploying apology incentives *before* delivery to protect the **4.0 average review score**.
-* **Capitalize on Top Categories:** Allocate optimized digital marketing spend toward the specific category lines showing dominant volume trends to systematically protect the **\$2M top-line base**.
+* **Improve Delivery Performance:** Investigate high late-delivery states and shipping corridors to identify carrier, processing, distance, and fulfillment bottlenecks.
 
-## Project Structure
+* **Increase Customer Retention:** Develop targeted post-purchase engagement and loyalty initiatives for one-time customers to encourage repeat purchases and increase customer lifetime value.
 
-```text
-Olist-Ecommerce-Analytics/
-├── Documentation/
-├── Excel/
-├── Images/
-├── PowerBI/
-├── SQL/
-└── README.md
+* **Introduce Proactive Delivery Monitoring:** Identify orders approaching their estimated delivery dates and intervene early when delays become likely.
+
+* **Monitor Customer Satisfaction:** Track review scores alongside delivery performance to identify service issues that may negatively affect customer experience.
+
+* **Prioritize High-Performing Categories:** Use category-level revenue and order-volume analysis to guide marketing, merchandising, and inventory decisions.
+
+* **Establish Continuous KPI Monitoring:** Regularly monitor revenue, order volume, customer retention, delivery performance, and customer satisfaction to identify emerging business trends.
+
+> **Analytical note:** The relationships identified in this project represent observed associations and should not be interpreted as proof of causation.
+
 ```
 
 ## Dataset
 
-Source: [Brazilian E-Commerce Public Dataset by Olist on Kaggle](https://kaggle.com)
+Source: [Brazilian E-Commerce Public Dataset by Olist on Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 The dataset contains anonymized Brazilian e-commerce transactions and related customer, product, payment, review, and logistics information.
 
