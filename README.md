@@ -30,17 +30,6 @@ Explores review scores and the relationship between delivery performance and cus
 
 The analysis investigates revenue trends, customer purchasing behavior, product and category performance, payment preferences, delivery delays, and customer satisfaction.
 
-The analytical order view contains **99,441 unique orders**. Revenue reconciliation between the analytical view and source order-item records produced a difference of 0.00. Based on the dashboard visualizations, the following specific trends have been identified:
-
-* **Fulfillment Friction:** The system tracks a high **Average Delivery Time: The analysis recorded an average delivery time of approximately 12 days, with a 7.65% late-delivery rate among orders included in the applicable delivery analysis. Regional breakdown reveals that shipping corridors into **AM and AL** experience extreme delivery friction, reaching up to **50.00% late delivery rates**.
-* **Retention Deficit:** Customer purchasing patterns show Customer Retention Opportunity, with **One-Time Customers accounting for 93.84%** of total buyers, leaving repeat shoppers at just 6.16%.
-* **Revenue Performance:** The dashboard provides a consolidated view of product sales, order value, and category-level revenue performance, with major contributions from leading product categories.
-* **Fulfillment vs Sentiment:** While the baseline **Average Review Score holds at a 4 out of 5**, The analysis shows an observable relationship between late delivery and lower review scores, with late deliveries associated with a greater concentration of 1- and 2-star reviews.
-
-## Key Insights
-
-The analysis investigates revenue trends, customer purchasing behavior, product and category performance, payment preferences, delivery delays, and customer satisfaction.
-
 The analytical order view contains **99,441 unique orders**. Revenue reconciliation between the analytical view and source order-item records produced a **0.00 difference**, confirming that the analytical transformation preserved the underlying product-revenue values.
 
 Based on the completed SQL analysis and Power BI dashboard, the following key trends were identified:
@@ -71,6 +60,16 @@ Based on the completed SQL analysis and Power BI dashboard, the following key tr
 
 > **Analytical note:** The relationships identified in this project represent observed associations and should not be interpreted as proof of causation.
 
+## Project Structure
+
+```text
+Olist-Ecommerce-Analytics/
+├── Documentation/
+├── Excel/
+├── Images/
+├── PowerBI/
+├── SQL/
+└── README.md
 ```
 
 ## Dataset
