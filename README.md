@@ -1,183 +1,72 @@
-\# Olist E-Commerce Customer \& Logistics Analytics
+## Dashboard
 
+The Power BI dashboard is organized into four analytical pages:
 
+### Executive Overview
 
-\## Overview
-
-
-
-An end-to-end e-commerce analytics project using the Brazilian
-
-E-Commerce Public Dataset by Olist.
-
-
-
-The project analyzes sales performance, customer behavior,
-
-product/category performance, logistics, payments and customer satisfaction.
-
-
-
-\## Business Questions
-
-
-
-\- How is revenue performing over time?
-
-\- Which categories and products generate the most revenue?
-
-\- Which states generate the most sales?
-
-\- What proportion of customers are repeat customers?
-
-\- How does freight cost vary across categories?
-
-\- How long do customers wait for delivery?
-
-\- Which states have higher late-delivery rates?
-
-\- Is late delivery associated with customer satisfaction?
-
-\- Which payment methods are most frequently used?
-
-\- Which sellers generate the most revenue?
-
-
-
-\## Tools
-
-
-
-\- MySQL
-
-\- Excel
-
-\- Power BI
-
-\- GitHub
-
-
-
-\## Data
-
-
-
-Brazilian E-Commerce Public Dataset by Olist.
-
-
-
-Approximately 100,000 orders covering the 2016–2018 period.
-
-
-
-\## Data Preparation
-
-
-
-SQL analytical views were created to:
-
-
-
-\- create an order-level analytical dataset
-
-\- aggregate order items
-
-\- aggregate reviews
-
-\- aggregate payments
-
-\- handle missing date values
-
-\- prevent duplicated revenue
-
-\- flag delivery-sequence anomalies
-
-
-
-\## Data Quality
-
-
-
-The final analytical order view contains 99,441 unique orders.
-
-
-
-Revenue reconciliation between the analytical view and source order-item
-
-data produced a difference of 0.00.
-
-
-
-One review record was not loaded compared with the expected source count.
-
-This represents approximately 0.001% of review records.
-
-
-
-\## Dashboard
-
-
-
-\### Executive Overview
-
-
+High-level view of e-commerce performance, order activity, revenue, and key business indicators.
 
 ![Executive Overview](Images/Executive_Overview.png)
 
+### Customer & Product Analysis
 
-\### Customer \& Product Analysis
+Explores customer behavior, product and category performance, and sales distribution.
 
+![Customer & Product Analysis](Images/Customer_Product_Analysis.png)
 
+### Logistics & Delivery
 
-![Customer Product Analysis](Images/Customer_Product_Analysis.png)
+Examines delivery performance, delivery delays, freight costs, and geographic differences.
 
+![Logistics & Delivery](Images/Logistics_Delivery.png)
 
+### Customer Satisfaction
 
-\### Logistics \& Delivery
-
-
-
-![Logistics Delivery](Images/Logistics_Delivery.png)
-
-
-\### Customer Satisfaction
-
-
+Explores review scores and the relationship between delivery performance and customer feedback.
 
 ![Customer Satisfaction](Images/Customer_Satisfaction.png)
 
+## Key Insights
 
+The analysis investigates revenue trends, customer purchasing behavior, product and category performance, payment preferences, delivery delays, and customer satisfaction.
 
-## 📁 Project Structure & Data Availability
+The analytical order view contains **99,441 unique orders**. Revenue reconciliation between the analytical view and source order-item records produced a difference of 0.00. Based on the dashboard visualizations, the following specific trends have been identified:
+
+* **Fulfillment Barriers:** The system tracks a high **Average Delivery Time of 12 Days**, driving a **Late Delivery Rate of 7.65%** (translating to 371 totally delayed orders). Regional breakdown reveals that shipping corridors into **AM and AL** experience extreme delivery friction, reaching up to **50.00% late delivery rates**.
+* **Retention Deficit:** Customer purchasing patterns show an extremely high attrition floor, with **One-Time Customers accounting for 93.84%** of total buyers, leaving repeat shoppers at just 6.16%.
+* **Core Revenue Drivers:** Overall sales reached **\$2 Million** across the operational view, maintaining an **Average Order Value (AOV) of \$419.69**, heavily anchored by volume in the bed/bath, health, and sports categories.
+* **Fulfillment vs Sentiment:** While the baseline **Average Review Score holds at a 4 out of 5**, localized visual analytics prove that late delivery status strongly correlates with 1 and 2-star feedback spikes.
+
+## Recommendations
+
+* **Address High-Delay Corridors:** Prioritize operational deep-dives into the **AM and AL logistics lanes** to renegotiate third-party carrier SLAs or re-route high-delay dispatch segments.
+* **Deploy Retention Campaigns:** Design targeted loyalty initiatives or post-purchase triggers focusing on the **93.84% one-time buyer demographic** to drive repeat traction.
+* **Proactive Support Interventions:** Create automated customer support alerts that flag orders exceeding the standard transit windows, deploying apology incentives *before* delivery to protect the **4.0 average review score**.
+* **Capitalize on Top Categories:** Allocate optimized digital marketing spend toward the specific category lines showing dominant volume trends to systematically protect the **\$2M top-line base**.
+
+## Project Structure
+
 ```text
 Olist-Ecommerce-Analytics/
-├── SQL_Scripts/                # Database queries and cleaning scripts
-├── Images/                     # Rendered dashboard screenshots
+├── README.md
+├── Images/
 │   ├── Executive_Overview.png
 │   ├── Customer_Product_Analysis.png
 │   ├── Logistics_Delivery.png
 │   └── Customer_Satisfaction.png
-├── Olist_Ecommerce_Analytics.pbix  # Main interactive dashboard file
-└── README.md                   # Project documentation
+├── Olist_Ecommerce_Analytics.pbix
+└── SQL_Scripts/
 ```
-*Note: Due to file size limitations on GitHub, raw source datasets are maintained locally. Cleaned aggregations and visual data schemas are fully accessible via the interactive Power BI file.*
 
----
+## Dataset
 
-## 💡 Data-Driven Insights & Business Recommendations
+Source: [Brazilian E-Commerce Public Dataset by Olist on Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-### 1. Executive Summary & Revenue Drivers
-* **Insight:** Total sales revenue reached **$2 Million** across **5,000 Total Orders**, maintaining an Average Order Value (AOV) of **$419.69**. 
-* **Recommendation:** Focus marketing efforts on the "bed_bath_table", "health_beauty", and "sports_leisure" categories, as they represent the highest volume trends driving the $2M top-line revenue.
+The dataset contains anonymized Brazilian e-commerce transactions and related customer, product, payment, review, and logistics information.
 
-### 2. Customer & Product Dynamics
-* **Insight:** Repeat customer behavior is critically low, with **One-Time Customers accounting for 93.84%** of the entire database, leaving repeat shoppers at just 6.16%.
-* **Recommendation:** Launch an automated post-purchase email retention campaign or loyalty points system targeted at one-time buyers within their first 30 days to systematically lift the 6.16% retention floor.
+## Limitations
 
-### 3. Logistics & Delivery Performance Breakdown
-* **Insight:** The system flags a critical fulfillment bottleneck: the **Average Delivery Time stands at 12 Days**, pushing the **Late Delivery Rate to 7.65%** (translating to 371 totally delayed orders).
-* **Recommendation:** Investigate shipping routes into **AM and AL**, which exhibit the highest late delivery distributions (reaching up to **50.00% late delivery rates** in specific regional corridors). Renegotiate SLAs with regional third-party logistics (3PL) partners or shift volume to higher-performing carriers.
-
-### 4. Customer Satisfaction & Review Impact
-* **Insight:** While the business maintains an **Average Review Score of 4 out of 5**, there is a severe drop in sentiment linked to fulfillment quality. On-time orders average high satisfaction, whereas late orders consistently trigger 1 and 2-star reviews.
-* **Recommendation:** Implement a proactive customer support alert system. If an order enters a delayed state, automatically trigger an email containing an apology and a small discount code *before* the customer receives the item to insulate the average review score from dropping below 4.
+* One review record was not loaded compared with the expected source count.
+* Missing or invalid delivery dates were handled in the analytical layer.
+* Delivery-sequence anomalies were flagged rather than silently corrected.
+* Observed relationships between delivery performance and satisfaction do not establish causation.
