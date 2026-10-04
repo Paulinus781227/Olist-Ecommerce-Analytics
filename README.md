@@ -12,13 +12,13 @@ High-level view of e-commerce performance, order activity, revenue, and key busi
 
 Explores customer behavior, product and category performance, and sales distribution.
 
-![Customer & Product Analysis](Images/Customer_Product_Analysis.png)
+![Customer and Product Analysis](Images/Customer_Product_Analysis.png)
 
 ### Logistics & Delivery
 
 Examines delivery performance, delivery delays, freight costs, and geographic differences.
 
-![Logistics & Delivery](Images/Logistics_Delivery.png)
+![Logistics and Delivery](Images/Logistics_Delivery.png)
 
 ### Customer Satisfaction
 
@@ -32,7 +32,7 @@ The analysis investigates revenue trends, customer purchasing behavior, product 
 
 The analytical order view contains **99,441 unique orders**. Revenue reconciliation between the analytical view and source order-item records produced a difference of 0.00. Based on the dashboard visualizations, the following specific trends have been identified:
 
-* **Fulfillment Barriers:** The system tracks a high **Average Delivery Time of 12 Days**, driving a **Late Delivery Rate of 7.65%** (translating to 371 totally delayed orders). Regional breakdown reveals that shipping corridors into **AM and AL** experience extreme delivery friction, reaching up to **50.00% late delivery rates**.
+* **Fulfillment Friction:** The system tracks a high **Average Delivery Time of 12 Days**, driving a **Late Delivery Rate of 7.65%** (translating to 371 totally delayed orders). Regional breakdown reveals that shipping corridors into **AM and AL** experience extreme delivery friction, reaching up to **50.00% late delivery rates**.
 * **Retention Deficit:** Customer purchasing patterns show an extremely high attrition floor, with **One-Time Customers accounting for 93.84%** of total buyers, leaving repeat shoppers at just 6.16%.
 * **Core Revenue Drivers:** Overall sales reached **\$2 Million** across the operational view, maintaining an **Average Order Value (AOV) of \$419.69**, heavily anchored by volume in the bed/bath, health, and sports categories.
 * **Fulfillment vs Sentiment:** While the baseline **Average Review Score holds at a 4 out of 5**, localized visual analytics prove that late delivery status strongly correlates with 1 and 2-star feedback spikes.
@@ -48,19 +48,17 @@ The analytical order view contains **99,441 unique orders**. Revenue reconciliat
 
 ```text
 Olist-Ecommerce-Analytics/
-├── README.md
+├── Documentation/
+├── Excel/
 ├── Images/
-│   ├── Executive_Overview.png
-│   ├── Customer_Product_Analysis.png
-│   ├── Logistics_Delivery.png
-│   └── Customer_Satisfaction.png
-├── Olist_Ecommerce_Analytics.pbix
-└── SQL_Scripts/
+├── PowerBI/
+├── SQL/
+└── README.md
 ```
 
 ## Dataset
 
-Source: [Brazilian E-Commerce Public Dataset by Olist on Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+Source: [Brazilian E-Commerce Public Dataset by Olist on Kaggle](https://kaggle.com)
 
 The dataset contains anonymized Brazilian e-commerce transactions and related customer, product, payment, review, and logistics information.
 
