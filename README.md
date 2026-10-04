@@ -122,15 +122,14 @@ This represents approximately 0.001% of review records.
 
 
 
-!\[Executive Overview](Images/Executive\_Overview.png)
-
+![Executive Overview](Images/Executive_Overview.png)
 
 
 \### Customer \& Product Analysis
 
 
 
-!\[Customer Product Analysis](Images/Customer\_Product\_Analysis.png)
+![Customer Product Analysis](Images/Customer_Product_Analysis.png)
 
 
 
@@ -138,15 +137,14 @@ This represents approximately 0.001% of review records.
 
 
 
-!\[Logistics Delivery](Images/Logistics\_Delivery.png)
-
+![Logistics Delivery](Images/Logistics_Delivery.png)
 
 
 \### Customer Satisfaction
 
 
 
-!\[Customer Satisfaction](Images/Customer\_Satisfaction.png)
+![Customer Satisfaction](Images/Customer_Satisfaction.png)
 
 
 
